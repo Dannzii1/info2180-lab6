@@ -9,13 +9,17 @@
        </button>
     </h5>
 </center>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-      document.getElementById("button1").addEventListener("click",function(){
-           window.alert(" A statement of the exact meaning of a word, especially in a dictionary.");
-      });
+      //document.getElementById("button1").addEventListener("click",function(){
+         //  window.alert(" A statement of the exact meaning of a word, especially in a dictionary.");
+           $(document).ready(function(){
+               $(document.getElementById("button1")).click(function(){
+                    window.alert(" A statement of the exact meaning of a word, especially in a dictionary.");
+               });
+           });
+     // });
    
 </script>
 
