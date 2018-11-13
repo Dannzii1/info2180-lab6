@@ -34,7 +34,7 @@ function xml_result(response){
     let result = "<ol>";
     
     for(var i = 0; i < definition.length; i++){
-        result+=`<li><h3>${definition[i].attributes[0].value.toUpperCase()}</h3><p>${definition[i].innerHTML.trim()}</p><p> - ${definitions[i].attributes[1].value}</p></li>`;
+        result+=`<li><h3>${definition[i].attributes[0].value.toUpperCase()}</h3><p>${definition[i].innerHTML.trim()}</p><p> - ${definition[i].attributes[1].value}</p></li>`;
     }
     
     result+= "</ol>"
