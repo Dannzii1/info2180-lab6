@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 
 <html>
-<body>
- <center>
-    <h5>
-       <button id="button1">
-           search
-       </button>
-    </h5>
-</center>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-
-      //document.getElementById("button1").addEventListener("click",function(){
-         //  window.alert(" A statement of the exact meaning of a word, especially in a dictionary.");
-           $(document).ready(function(){
-               $(document.getElementById("button1")).click(function(){
-                    window.alert(" A statement of the exact meaning of a word, especially in a dictionary.");
-               });
-           });
-     // });
-   
-</script>
-
-</body>
+    <head>
+        <title>
+            Dictionary
+        </title>
+        <script type="text/javascript" src="Lookup.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+         <div class="heading">
+             <h1> Web Dictionary </h1>
+             <div class="lookUp">
+                 <h3> Look up the definitions of a word </h3>
+                 <span class="example">eg. Definition, ajax, bar, html, css, javascript, php</span>
+                 <form id="Button">
+                     <input type="text" name="" placeholder="Search..." id="search-bar"/>
+                     <input type="submit" value="Search" id="submission"/>
+                     <input type="Submit" value="Get all definitions" id="all"/>
+                 </form>
+                 <hr>
+                 <div class="results">
+                     <span> Result </span>
+                     <div id= "updating"></div>
+                 </div>
+             </div>
+         </div>
+    </body>
+    
 </html>
