@@ -11,7 +11,7 @@ function Search_dic(word,everything) {
             if (everything){
                xml_result(request.responseXML); 
             }else{
-               update_word_results(request.responseText);
+               update_results(request.responseText);
             }
          }else{
             window.alert("There was an error finding that parameter");
@@ -25,7 +25,7 @@ function Search_dic(word,everything) {
    
 }
 
-function update_word_results(response){
+function update_results(response){
     document.getElementById("results").innerHTML = response;
 }
 
@@ -34,12 +34,12 @@ function xml_result(response){
     let result = "<ol>";
     
     for(var i = 0; i < definition.length; i++){
-        result+=`<li><h3>${definition[i].attributes[0].value.toUpperCase()}</h3><p>${definitions[i].innerHTML.trim()}</p><p> - ${definitions[i].attributes[1].value}</p></li>`;
+        result+=`<li><h3>${definition[i].attributes[0].value.toUpperCase()}</h3><p>${definition[i].innerHTML.trim()}</p><p> - ${definitions[i].attributes[1].value}</p></li>`;
     }
     
     result+= "</ol>"
     
-    update_word_results(results)
+    update_results(result)
 }
 
 function main(){
@@ -47,5 +47,19 @@ function main(){
    document.getElementById("submission").addEventListener("click",function(){
       // window.alert(" A statement of the exact meaning of a word, especially in a dictionary.");
    });
+let submit = $("#submission")[0];
+let submitAll = $("#all")[0];
+    
+    submit.onclick = function(event){
+        event.preventDefault();
+        Search_dic(document.getElementsByName("q")[0].value.trim().toLowerCase(),false);
+        document.getElementsByName("q")[0].value = "";
+    };
+    
+    submitAll.onclick = function(event){
+        event.preventDefault();
+        Search_dic('', true);
+        document.getElementsByName("q")[0].value = "";
+    }
    
 }
