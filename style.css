@@ -2,52 +2,49 @@
 body {
   padding: 0;
   margin: 0;
-  background:purple
+  background:purple;
 }
 
-.heading {
+.wordSearch{
   border: 2px white solid;
   width: auto;
   height: auto;
   display: grid;
-}
-
-.boxIT {
-  border: 4px white solid;
   background-color: LightSeaGreen;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
+  grid-columns: 2000px 200px;
+  grid-rows: 2000px 2000px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.lookUp{
-  border: 4px white solid;
-  background-color: LightSeaGreen;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
+h1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 2px white solid;
+  background-color: #00cc99;
+  display: flex;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.Button{
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.result{
+  display: flex;
+  justify-content:center;
 }
 
-.searchBar{
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
+hr { 
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }
 
-.Results{
-  padding: 10px;
-}
